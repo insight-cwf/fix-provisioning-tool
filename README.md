@@ -36,7 +36,7 @@ This tool performs the following actions
 - It will not attempt to reinstall software or kick off policies scoped to the Mac.
 - It is not intended to be used as a remediation for failures stemming from User Initiated Enrollment. Although it will suggest if it thinks that UIE may have been used to enroll the Mac due to the `profiles renew -type enrollment` command failing to renew the device enrollment profile.
 
-## Change Log: [Here][https://github.com/icwfrepo/fix-provisioning-tool/blob/master/CHANGELOG.md]
+## Change Log: [Here](https://github.com/icwfrepo/fix-provisioning-tool/blob/master/CHANGELOG.md)
 
 
 ## ToDo
