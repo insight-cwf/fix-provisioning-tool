@@ -18,8 +18,8 @@ This tool performs the following actions
 
 ## How to Run the Tool
 
-1. Download the latest package release from [here]().
-2. Install the package and enter admin credentials.
+1. Download the latest package release from [here](https://github.com/icwfrepo/fix-provisioning-tool/releases/tag/v0.0.6).
+2. Install the package and enter admin credentials. https://github.com/icwfrepo/fix-provisioning-tool/releases/download/v0.0.6/fix-provisioning-tool.pkg
 
     - You can run the package from anywhere but the best place is the Desktop.
 
@@ -41,6 +41,6 @@ This tool performs the following actions
 
 ## ToDo
 
-- (done - v0.0.2) - Add the abilty to remove the MDM certificate payload from profiles.
-- (done - v0.0.3) - Add a UI notification at the end to let the user know what they need to do with the information gathered from the tool.
-- Figure out how to turn this into an app.
+- ✅ - v0.0.2 - Add the abilty to remove the MDM certificate payload from profiles.
+- ✅ - v0.0.3 - Add a UI notification at the end to let the user know what they need to do with the information gathered from the tool.
+- 🔲 - Figure out how to turn this into an app.
