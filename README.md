@@ -44,3 +44,5 @@ This tool performs the following actions
 - ✅ - v0.0.2 - Add the abilty to remove the MDM certificate payload from profiles.
 - ✅ - v0.0.3 - Add a UI notification at the end to let the user know what they need to do with the information gathered from the tool.
 - 🔲 - Figure out how to turn this into an app.
+- 🔲 - Convert to python or swift.
+- 🔲 - Additional enrollment error checking and handling.
