@@ -18,7 +18,7 @@ This tool performs the following actions
 
 ## How to Run the Tool
 
-1. Download the latest package release from [here](https://github.com/icwfrepo/fix-provisioning-tool/releases/tag/v0.0.6).
+1. Download the latest package release from [here](https://github.com/icwfrepo/fix-provisioning-tool/releases).
 
 2. Install the package and enter admin credentials.
 
