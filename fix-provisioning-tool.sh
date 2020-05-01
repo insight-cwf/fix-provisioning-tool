@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # GitHub: @captam3rica
-VERSION=0.0.6
+VERSION=1.0.1
 
 #
 #   A script to help workaround automated enrollment issues due to DEP communication
@@ -195,15 +195,18 @@ search_for_enrollment_stub() {
     # Check for the present of the enrollment complete stub file.
     # Takes in the ENROLLMENT_COMPLETE_STUB as a parameter
     file="$1"
+    stub_status=""
+
     if [ -f "$file" ]; then
         # The existance of this file means that the device was able to make it all the
         # way through the provisioning process, but perhaps something else cause an
         # issue with part of the process.
-        logging "info" "$file was found ..."
-        logging "info" "There is a good chance that a DEVICE SIGNATURE ERROR was not the reason for this enrollment failing."
+        stub_status=True
     else
+        stub_status=False
         logging "info" "$file not found ..."
     fi
+    printf "%s\n" "$stub_status"
 }
 
 
@@ -543,7 +546,7 @@ main() {
     # Run the core logic
 
     logging "info" ""
-    logging "info" "Starting $LOG_NAME log"
+    logging "info" "Starting $SCRIPT_NAME log"
     logging "info" ""
     logging "info" "Script version: $VERSION"
     logging "info" "Date: $TODAY"
@@ -577,7 +580,17 @@ main() {
     search_for_enrollment_logs "$ENROLLMENT_LOG_DIR"
 
     logging "info" "Checking to see if EnrollmentComplete stub is present ..."
-    search_for_enrollment_stub "$ENROLLMENT_COMPLETE_STUB"
+    enrollment_stub_status="$(search_for_enrollment_stub $ENROLLMENT_COMPLETE_STUB)"
+
+    if [ "$enrollment_stub_status" = True ]; then
+        # Don't go any further ... exit.
+        logging "info" "Found the enrollment_complete stub file ..."
+        logging "info" "There is a good chance that a DEVICE SIGNATURE ERROR was not the reason for this enrollment failing."
+        logging "info" "Existing the fix-provisioning-tool ..."
+        logging "info" "Copying $LOG_NAME to $enrollment_log_dir"
+        copy_files "$LOG_PATH" "$enrollment_log_dir"
+        exit 0
+    fi
 
     # Checking for bad apples
     signature_error_status="$(check_for_device_signature_errors "$JAMF_LOG")"
@@ -627,7 +640,7 @@ main() {
     fi
 
     logging "info" ""
-    logging "info" "Ending $LOG_NAME log"
+    logging "info" "Ending $SCRIPT_NAME log"
     logging "info" ""
 
     # Copy the unenrollmentworkaround.log

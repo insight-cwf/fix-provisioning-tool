@@ -430,7 +430,7 @@
 			<key>POSTINSTALL_PATH</key>
 			<dict>
 				<key>PATH</key>
-				<string>scripts/fix-provisioning-tool.sh</string>
+				<string>scripts/postinstall.sh</string>
 				<key>PATH_TYPE</key>
 				<integer>1</integer>
 			</dict>
@@ -440,7 +440,24 @@
 				<integer>1</integer>
 			</dict>
 			<key>RESOURCES</key>
-			<array/>
+			<array>
+				<dict>
+					<key>CHILDREN</key>
+					<array/>
+					<key>GID</key>
+					<integer>0</integer>
+					<key>PATH</key>
+					<string>additional-resources/fix-provisioning-tool.sh</string>
+					<key>PATH_TYPE</key>
+					<integer>1</integer>
+					<key>PERMISSIONS</key>
+					<integer>420</integer>
+					<key>TYPE</key>
+					<integer>3</integer>
+					<key>UID</key>
+					<integer>0</integer>
+				</dict>
+			</array>
 		</dict>
 		<key>PACKAGE_SETTINGS</key>
 		<dict>
@@ -467,7 +484,7 @@
 			<key>USE_HFS+_COMPRESSION</key>
 			<false/>
 			<key>VERSION</key>
-			<string>0.0.5</string>
+			<string>1.0.1</string>
 		</dict>
 		<key>PROJECT_COMMENTS</key>
 		<dict>
@@ -660,7 +677,7 @@
 				</dict>
 			</array>
 			<key>NAME</key>
-			<string>fix-provisioning-tool</string>
+			<string>fix-provisioning-tool-1.0.1</string>
 			<key>PAYLOAD_ONLY</key>
 			<false/>
 		</dict>

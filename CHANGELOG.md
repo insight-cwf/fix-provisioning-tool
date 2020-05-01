@@ -15,7 +15,11 @@ and this project adheres to Year Notation Versioning.
 - `Security` in case of vulnerabilities.
 
 
-## [2020-03-11]
+## [v1.0.1] - 2020-05-01
+
+- **Added** - Added a check that will cause the tool to quit if the `enrollment_complete.txt` stub file is found.
+
+## [v0.0.6] - 2020-03-11
 
 - v0.0.6 - Updated log file name.
 - v0.0.5 - Added check for valid internet connection before attempting to renew the device enrollment profile.
