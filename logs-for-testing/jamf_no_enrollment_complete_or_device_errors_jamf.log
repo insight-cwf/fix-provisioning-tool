@@ -1,0 +1,11 @@
+Mon Feb 17 12:22:57 MacBook Pro jamf[611]: Removing existing launchd task /Library/Application Support/JAMF/tmp/com.jamfsoftware.task.startssh.plist...
+Mon Feb 17 12:22:57 MacBook Pro jamf[632]: The SSL Certificate for https://ima.jamfcloud.com/ must be trusted for the jamf binary to connect to it.
+Enrolling computer...
+Mon Feb 17 12:23:32 MacBook Pro jamf[657]: An error occurred while enrolling computer: Connection failure: "The operation couldn’t be completed. ( error 502.)"
+Mon Feb 17 12:23:33 MacBook Pro jamf[657]: Error Domain=com.jamf.jamfsecurity.error Code=-25300 "searchForItems:conversionBlock:error: : The specified item could not be found in the keychain." UserInfo={NSLocalizedDescription=searchForItems:conversionBlock:error: : The specified item could not be found in the keychain.}
+Mon Feb 17 12:23:33 MacBook Pro jamf[657]: An error occurred while sending enrollment information to Jamf Pro: Security Error - A security error has occurred.
+Mon Feb 17 12:23:33 MacBook Pro jamf[657]: Error Domain=com.jamf.jamfsecurity.error Code=-25300 "searchForItems:conversionBlock:error: : The specified item could not be found in the keychain." UserInfo={NSLocalizedDescription=searchForItems:conversionBlock:error: : The specified item could not be found in the keychain.}
+Mon Feb 17 12:23:33 MacBook Pro jamf[657]: Removing existing launchd task /Library/Application Support/JAMF/tmp/com.jamfsoftware.task.policy.plist...
+Mon Feb 17 12:23:33 MacBook Pro jamf[657]: Enroll return code: 70
+Mon Feb 17 12:23:35 MacBook Pro jamf[741]: Error Domain=com.jamf.jamfsecurity.error Code=-25300 "searchForItems:conversionBlock:error: : The specified item could not be found in the keychain." UserInfo={NSLocalizedDescription=searchForItems:conversionBlock:error: : The specified item could not be found in the keychain.}
+
