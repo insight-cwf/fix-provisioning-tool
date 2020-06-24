@@ -20,7 +20,7 @@ fix-provisioning-tool is a package containing a script that will help remediate 
 
 ## How to Run the Tool
 
-1. Download the latest package release from [here](https://github.com/icwfrepo/fix-provisioning-tool/releases).
+1. Download the latest package release from [here](https://github.com/icwfrepo/fix-provisioning-tool/releases/tag/latest).
 
 2. Install the package and enter admin credentials.
 
@@ -60,6 +60,6 @@ fix-provisioning-tool is a package containing a script that will help remediate 
 - ✅ - v0.0.3 - Add a UI notification at the end to let the user know what they need to do with the information gathered from the tool.
 - ✅ - v2.0.0 - Add ability to retry an enrollment if nothing Jamf related is found. I.E. the provisioning never started.
 - ✅ - v2.0.0 - Additional enrollment error checking and handling.
+- ✅ - v2.0.0 - Notarize ...
 - 🔲 - Figure out how to turn this into an app.
-- 🔲 - Notarize???
 - 🔲 - Convert to python or swift or golang ... maybe 😜.
