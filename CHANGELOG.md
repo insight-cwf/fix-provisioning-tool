@@ -1,4 +1,4 @@
-# Change Log
+# Change Log - Fix Provisioning Tool
 All notable changes to this project are documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
@@ -13,6 +13,18 @@ and this project adheres to Year Notation Versioning.
 - `Removed` for now removed features.
 - `Fixed` for any bug fixes.
 - `Security` in case of vulnerabilities.
+
+
+## [v2.0.0] - 2020-06-11
+
+Major over hall of code logic.
+
+- **Added** - Additional report outputs depending on the state of the Mac.
+- **Added** - Logic to check for valid internet connection before attempting to do anything else.
+- **Added** - Logic to check for the presence of the `jamf.log`
+- **Added** - Logic to check for `enrollmentComplete` in the `jamf.log` only `Device Signature errors` were not found.
+- **Added** - If neither of the above errors are found a message stating that something else must have caused the enrollment failure.
+- **Added** - Ability to attempt an MDM enrollment if the `jamf.log` is not found and no other profiles exist on the machine.
 
 
 ## [v1.0.1] - 2020-05-01

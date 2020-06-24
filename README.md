@@ -9,11 +9,12 @@ fix-provisioning-tool is a package containing a script that is intended to help 
 
 This tool performs the following actions
 
+- Checks to see if files like `jamf.log`, the jamf binary, and other Jamf related collateral are present on a Mac.
 - Check for the "Device Signature Error" string in the `jamf.log`. If the error is not found no actions will be taken on the Mac.
-- Attempt to remove the Jamf MDM Profile, Jamf Framework, Jamf CA Certificate profile.
-- Attempt to renew the device enrollment profile on the Mac and initiate automated enrollment again.
-- Display a report of findings and information to direct the user/technician in the direction of a potential cause and path to resolution.
-- Generate an `Enrollment_Logs` directory on the user's Desktop containing a copy of the `jamf.log`, and copies of enrollment logs in `/Library/Logs`, and a copy of the fix\_provisioning\_tool.log.
+- Attempts to remove the Jamf MDM Profile, Jamf Framework, Jamf CA Certificate profile.
+- Attempts to renew the device enrollment profile on the Mac and initiate automated enrollment again.
+- Displays a report of findings and information to direct the user/technician in the direction of a potential cause and path to resolution.
+- Generates an `Enrollment_Logs` directory on the user's Desktop containing a copy of the `jamf.log`, and copies of enrollment logs in `/Library/Logs`, and a copy of the fix\_provisioning\_tool.log.
 
 
 ## How to Run the Tool
@@ -44,6 +45,7 @@ This tool performs the following actions
 
 - ✅ - v0.0.2 - Add the abilty to remove the MDM certificate payload from profiles.
 - ✅ - v0.0.3 - Add a UI notification at the end to let the user know what they need to do with the information gathered from the tool.
+- 🔲 - Add ability to retry an enrollment if nothing Jamf related is found. I.E. the provisioning never started.
 - 🔲 - Figure out how to turn this into an app.
 - 🔲 - Convert to python or swift.
 - 🔲 - Additional enrollment error checking and handling.
