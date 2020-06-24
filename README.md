@@ -20,7 +20,7 @@ fix-provisioning-tool is a package containing a script that will help remediate 
 
 ## How to Run the Tool
 
-1. Download the latest package release from [here](https://github.com/icwfrepo/fix-provisioning-tool/releases/tag/latest).
+1. Download the latest package release from [here](https://github.com/icwfrepo/fix-provisioning-tool/releases/latest).
 
 2. Install the package and enter admin credentials.
 
